@@ -1,10 +1,9 @@
 [tool.poetry]
-name = "dalai-bot"
+name = "dorfbot"
 version = "0.1.0"
 description = ""
 authors = ["mcgillij <mcgillivray.jason@gmail.com>"]
 readme = "README.md"
-packages = [{include = "dalai_bot"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
