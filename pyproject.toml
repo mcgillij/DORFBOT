@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dalai-bot"
+version = "0.1.0"
+description = ""
+authors = ["mcgillij <mcgillivray.jason@gmail.com>"]
+readme = "README.md"
+packages = [{include = "dalai_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-socketio = {extras = ["client"], version = "^5.8.0"}
+discord = "^2.2.2"
+asyncio = "^3.4.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
