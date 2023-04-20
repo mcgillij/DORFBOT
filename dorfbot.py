@@ -80,11 +80,6 @@ def searchResponse(responseResults, filteredEntityInput: str):
 
     return matches
 
-###
-# FUNC NAME: requestScryfall
-# FUNC DESC: Queries the Scryfall API to obtain a thumbnail image.
-# FUNC TYPE: Function
-###
 def requestScryfall(splitSearchTerm: list):
 
     requestStr = f"https://api.scryfall.com/cards/search?q={' '.join(splitSearchTerm)}&include_extras=true&include_multilingual=true&include_variations=true"
@@ -122,11 +117,6 @@ def requestScryfall(splitSearchTerm: list):
     # Otherwise, no valid image found
     return 404
 
-###
-# FUNC NAME: getFilterType
-# FUNC DESC: Calculates the filter type based on what is supported by open5e and the requested route to search
-# FUNC TYPE: Function
-###
 def getRequestType(route: str):
     # Determine filter type (search can only be used for some directories)
     if route in SEARCH_PARAM_DIRECTORIES:
@@ -134,11 +124,6 @@ def getRequestType(route: str):
     else:
         return "text"
 
-###
-# FUNC NAME: requestOpen5e
-# FUNC DESC: Queries the Open5e API and returns an array of results
-# FUNC TYPE: Function
-###
 def requestOpen5e(query: str, filteredEntityInput: str, wideSearch: bool, listResults: bool):
 
     # API Request
@@ -193,12 +178,6 @@ def requestOpen5e(query: str, filteredEntityInput: str, wideSearch: bool, listRe
             # We already got a match, return it
             return firstMatchedEntity
 
-
-###
-# FUNC NAME: constructResponse
-# FUNC DESC: Constructs embed responses from the API object.
-# FUNC TYPE: Function
-###
 def constructResponse(entityInput: str, route: str, matchedObj: dict):
     responses = {"files": list(), "embeds": list()}
 
