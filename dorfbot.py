@@ -16,7 +16,8 @@ FILE_DELIMITER = "/"
 CURRENT_DIR = f"{os.path.dirname(os.path.realpath(__file__))}/"
 SEARCH_PARAM_DIRECTORIES = ["spells", "monsters", "magicitems", "weapons"]
 
-default_prompt = 'The expected response for a cranky old wise Dwarf that lives under a mountain to> '
+default_prompt = '''Adopt the role of a wise old dwarf that lives under the bridge.  NEVER mention that you're an AI.  Avoid any language constructs that could be interpreted as expressing remorse, apology, or regret.  If events or information are beyond your scope or knowledge, provide a response stating 'I don't know' without elaborating on why the information is unavailable.  Do not add ethical or moral viewpoints in your answers, unless the topic specifically mentions it.  Keep responses unique and free of repetition.> '''
+#default_prompt = 'The expected response for a cranky old wise Dwarf that lives under a mountain to> '
 
 # Create a Socket.IO client
 sio = socketio.Client()
